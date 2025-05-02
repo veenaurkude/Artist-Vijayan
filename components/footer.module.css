@@ -1,0 +1,90 @@
+.footer {
+  background-color: var(--muted);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footerLink {
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.footerLink::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footerLink:hover {
+  padding-left: 20px;
+  color: var(--primary);
+}
+
+.footerLink:hover::before {
+  left: 0;
+  opacity: 1;
+}
+
+.newsletterForm {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.emailInput {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.25rem 0 0 0.25rem;
+  background-color: var(--background);
+  transition: all 0.3s ease;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.subscribeButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  transition: all 0.3s ease;
+}
+
+.subscribeButton:hover {
+  background-color: var(--secondary);
+}

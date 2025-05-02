@@ -1,0 +1,250 @@
+.aboutHeader {
+  background-color: var(--muted);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutHeader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+}
+
+.bioImageContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.bioImageAccent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 20px;
+  background-color: var(--accent);
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+.highlight {
+  color: #c84b31;
+  font-weight: 600;
+}
+.statCard {
+  padding: 1.5rem;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.statementText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  font-style: italic;
+  position: relative;
+}
+
+.statementText p {
+  margin-bottom: 1.5rem;
+}
+
+.statementText::before,
+.statementText::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.2;
+  position: absolute;
+  line-height: 1;
+}
+
+.statementText::before {
+  top: -1rem;
+  left: -1rem;
+}
+
+.statementText::after {
+  bottom: -3rem;
+  right: -1rem;
+}
+
+.signature {
+  font-family: var(--font-playfair);
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  color: var(--primary);
+  transform: rotate(-5deg);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--muted);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timelineItem {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timelineItem::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--background);
+  border: 4px solid var(--primary);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after {
+  right: -10px;
+}
+
+.right::after {
+  left: -10px;
+}
+
+.timelineContent {
+  padding: 20px;
+  background-color: var(--background);
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timelineYear {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--muted);
+  border-radius: 0.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.skillCard {
+  padding: 1.25rem;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.skillBar {
+  height: 8px;
+  background-color: var(--muted);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+  width: 0;
+  animation: skillAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes skillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--width);
+  }
+}
+
+.ctaSection {
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 107, 107, 0.05), rgba(78, 205, 196, 0.05));
+  z-index: -1;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timelineItem::after {
+    left: 21px;
+  }
+
+  .left::after,
+  .right::after {
+    left: 21px;
+  }
+
+  .right {
+    left: 0;
+  }
+}

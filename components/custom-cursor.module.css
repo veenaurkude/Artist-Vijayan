@@ -1,0 +1,29 @@
+:root {
+  --cursor-size: 6px;
+  --cursor-hover-size: 8px;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: 50%;
+  background-color: var(--primary);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(1);
+  transition: width 0.2s, background-color 0.2s;
+}
+
+/* .custom-cursor.hover {
+  width: calc(var(--cursor-size) * 1);
+  height: calc(var(--cursor-size) * 1);
+  background-color: var(--accent);
+} */
+
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(var(--cursor-scale-hover));
+  background-color: var(--accent);
+}
