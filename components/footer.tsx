@@ -10,6 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
+              
               <ColorText>The Art Of Vijayan</ColorText>
             </h3>
             <p className="text-muted-foreground mb-4">
@@ -75,7 +76,7 @@ export default function Footer() {
               </Link> */}
 
               <Link
-                href="mailto:artist@example.com"
+                href="mailto:vijayan.yoga@gmail.com"
                 className={`${styles.socialIcon} hoverable`}
                 aria-label="Email"
               >

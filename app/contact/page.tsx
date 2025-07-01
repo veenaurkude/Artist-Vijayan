@@ -120,9 +120,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Studio Location</h3>
                   <p className="text-muted-foreground">
-                    Art Studio 
-                    <br />
-                    Nagpur
+                    Art Studio, Nagpur
                     
                   </p>
                 </div>
@@ -137,9 +135,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Phone</h3>
                   <p className="text-muted-foreground">
-                    Studio: <a href="tel:+919823189804">+919823189804</a>
-                    <br />
-                    Mobile: <a href="tel:+919823189804">+919823189804</a>
+                     <a href="tel:+919823189804">+91-9823189804</a> | <a href="tel:+919422439804">+91-9422439804</a>
                   </p>
                 </div>
               </ParallaxEffect>
@@ -153,9 +149,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Email</h3>
                   <p className="text-muted-foreground">
-                    info@artistname.com
-                    <br />
-                    commissions@artistname.com
+                    <a href="mailto:vijayan.yoga@gmail.com">vijayan.yoga@gmail.com</a>
                   </p>
                 </div>
               </ParallaxEffect>
@@ -165,7 +159,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-12 relative overflow-hidden">
+      
+      {/* <section className="py-12 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto">
@@ -294,7 +289,7 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
         </div>
-      </section>
+      </section> */}
 
       {/* Studio Hours */}
       <section className="py-12 relative overflow-hidden">
